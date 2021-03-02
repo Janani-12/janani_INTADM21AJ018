@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+function actbportal(){
+	var customername=document.actb.customername.value;
+	var customermail=document.actb.customermail.value;
+	var mobilenumber=document.actb.mobilenumber.value;
+	var scheme=document.actb.scheme.value;
+	
+	if(customername==""||customername==null){
+		alert("Customer name cannot be empty");
+	}else if(customermail==""||customermail==null){
+		alert("Customer mail cannot be empty");
+	}else if(mobilenumber==""||mobilenumber==null){
+		alert("mobile number cannot be empty");
+	}else if(scheme==""||scheme==null){
+		alert("select the scheme");
+	}
+}
+</script>
+</head>
+<body style="background-color:yellow;">
+	<center>
+		<h1 style="color: green"><b>ACTB Connection Portal</b></h1>
+		<form action="" name="actb" onsubmit="return actbportal()">
+			<table>
+				<tr>
+					<td>Customer Name</td>
+					<td><input type="text" name="customername" placeholder="Enter the customer name"></td>
+				</tr>
+				<tr>
+					<td>Customer email</td>
+					<td><input type="email" name="customermail" placeholder="abc@gmail.com"></td>
+				</tr>
+				<tr>
+					<td>Mobile</td>
+					<td><input type="number" name="mobilenumber" placeholder="Enter the mobile number"></td>
+				</tr>
+				<tr>
+					<td>Type of boardband</td>
+					<td><select name ="plan">
+					<option value="pre">pre</option>
+					<option value="pre">post</option>
+					</select></td>
+				</tr>
+				<tr>
+					<td>Scheme name</td>
+					<td><input type="radio" name="scheme" id="scheme1">Local</td>
+					<td><input type="radio" name="scheme" id="scheme2">STD</td>
+					<td><input type= "radio" name=rscheme" id="scheme3">Fulltalktime</td>
+				</tr>
+				<tr>
+					<td>Connection duration</td>
+					<td><input type="number" name="duration" id="duration" min="1" max="12" required="required"></td>
+				</tr>
+				<tr>
+					<td style="background-color: white"><input type="submit" name="submit" value="Calculate bill amount"></td>
+					<td style="background-color: white"><input type="button" name="reset" value="reset"></td>
+				</tr>
+			</table>
+			<h2>Rental cost table</h2>
+			<table border="1">
+			<tr>
+				<td><b>Connection type</b></td>
+				<td><b>Call limit</b></td>
+				<td><b>Monthly rental</b></td>
+			</tr>
+			<tr>
+			<td>Pre</td>
+			<td>500</td>
+			<td>75</td>
+		</tr>
+		<tr>
+			<td>Post</td>
+			<td>unlimited</td>
+			<td>150</td>
+		</tr>
+				
+			</table>			
+		</form>
+	</center>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+function emicalculator(){
+	var loan=document.emi.loan.value;
+	var rate=document.emi.rate.value;
+	var period=document.emi.period.value;
+	
+	if(loan==""||loan==null){
+		alert("Loan amount cannot be empty");
+	}else if(rate==""||rate==null){
+		alert("Rate cannot be empty");
+	}else if(period==""||period==null){
+		alert("Loan period cannot be empty");
+	}
+}
+</script>
+<style type="text/css">
+center{
+border:solid;
+padding: 2px;
+font-size: medium;
+}
+</style>
+</head>
+<body>
+	<center>
+		<h1 style="color: blue"><b>EMI Calculator</b></h1>
+		<form action="" name="emi" onsubmit="return emicalculator()">
+		<table>
+			<tr>
+				<td>Loan Amount</td>
+				<td><input type="number" name="loan"></td>
+			</tr>
+			<tr>
+				<td>Interset Rate</td>
+				<td><input type="number" name="rate"></td>
+			</tr>
+			<tr>
+				<td>Loan period (in month)</td>
+				<td><input type="number" name="period"></td>
+			</tr>
+		</table>
+		  <br><input type="submit" value="Find EMI">
+		</form>
+	</center>
+</body>
+</html>
